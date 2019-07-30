@@ -17,6 +17,25 @@ class Home extends StatelessWidget {
             new UserAccountsDrawerHeader(
               accountName: new Text('Car Mrket'),
               accountEmail: new Text('for contact admin@admin.com'),
+              currentAccountPicture: new CircleAvatar(
+                backgroundImage: new NetworkImage('https://www.staticwhich.co.uk/media/images/adhoc/cars---do-not-delete-473727.jpg'),
+              ),
+            ),
+            new ListTile(
+              title: new Text('Add Car'),
+              onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Add();
+                  }));
+                },
+            ),
+            new ListTile(
+              title: new Text('Market'),
+              onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Market(null);
+                  }));
+                },
             ),
           ],
         ),
