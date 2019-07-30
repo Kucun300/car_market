@@ -2,6 +2,7 @@ import 'package:car_market/Home.dart';
 import 'package:flutter/material.dart';
 import 'Add.dart';
 import 'models/Model.dart';
+import 'detailes.dart';
 
 class Market extends StatefulWidget {
   Car car;
@@ -19,19 +20,20 @@ class _MarketState extends State<Market> {
       appBar: AppBar(
         title: Text('Car Market'),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          Text('about ${widget.car.about}'),
-          RaisedButton(
-            child: Text('sheel wdy home'),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Home();
+          ListTile(
+            leading: Icon(Icons.account_box , size: 50,),
+            title: Text('${widget.car.description}',style: TextStyle(fontSize: 24,color: Colors.blue,),),
+            subtitle: Text('${widget.car.about}' , style:TextStyle(color: Colors.red),),
+            onTap: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context){
+                return detailes(widget.car);
               }));
             },
-          )
+          ),
         ],
-      ),
+      )
     );
   }
 }
