@@ -45,7 +45,7 @@ class _MarketState extends State<Market> {
                     '${widget.car.about}',
                     style: TextStyle(
                       color: Colors.indigo[900],
-                      fontSize: 12,
+                      fontSize: 16,
                     ),
                   ),
                   onTap: () {
