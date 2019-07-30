@@ -15,26 +15,27 @@ class _detailesState extends State<detailes> {
     return Scaffold(
       appBar: AppBar(
         title: Text('details'),
+        backgroundColor: Colors.indigo[900],
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        color: Colors.indigo[900],
+        color: Colors.red[900],
         child: Center(
           child: Column(
             children: <Widget>[
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(10),
-                color: Colors.brown,
+                color: Colors.white,
                 child: Column(
                   children: <Widget>[
-                    Text('description: ${widget.car.description}'),
-                    Text('${widget.car.mileage}'),
-                    Text('${widget.car.publish_on}'),
-                    Text('${widget.car.about}'),
-                    Text('${widget.car.car_model}'),
-                    Text('${widget.car.car_gear}'),
-                    Text('${widget.car.car_price}'),
+                    Text('Description: ${widget.car.description}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('Mileage: ${widget.car.mileage}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('Published on: ${widget.car.publish_on}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('About: ${widget.car.about}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('Model: ${widget.car.car_model}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('Gear: ${widget.car.car_gear}', style: TextStyle(color: Colors.indigo[900]),),
+                    Text('Price: ${widget.car.car_price}', style: TextStyle(color: Colors.indigo[900]),),
                   ],
                 ),
               ),
