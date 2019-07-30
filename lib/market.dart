@@ -23,7 +23,7 @@ class _MarketState extends State<Market> {
       body: ListView(
         children: <Widget>[
           ListTile(
-            leading: Icon(Icons.account_box , size: 50,),
+            leading: Icon(Icons.account_box , size: 70,),
             title: Text('${widget.car.description}',style: TextStyle(fontSize: 24,color: Colors.blue,),),
             subtitle: Text('${widget.car.about}' , style:TextStyle(color: Colors.red),),
             onTap: (){

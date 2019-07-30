@@ -16,18 +16,34 @@ class _detailesState extends State<detailes> {
       appBar: AppBar(
         title: Text('details'),
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-          Text('description: ${widget.car.description}'),
-          Text('${widget.car.mileage}'),
-          Text('${widget.car.publish_on}'),
-          Text('${widget.car.about}'),
-          Text('${widget.car.car_model}'),
-          Text('${widget.car.car_gear}'),
-          Text('${widget.car.car_price}'),
-        ], 
-      ), 
+      body: Container(
+        padding: EdgeInsets.all(20),
+        color: Colors.green,
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                color: Colors.brown,
+                child: Column(
+                  children: <Widget>[
+                    Text('description: ${widget.car.description}'),
+                    Text('${widget.car.mileage}'),
+                    Text('${widget.car.publish_on}'),
+                    Text('${widget.car.about}'),
+                    Text('${widget.car.car_model}'),
+                    Text('${widget.car.car_gear}'),
+                    Text('${widget.car.car_price}'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
