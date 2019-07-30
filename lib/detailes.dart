@@ -18,7 +18,7 @@ class _detailesState extends State<detailes> {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        color: Colors.green,
+        color: Colors.indigo[900],
         child: Center(
           child: Column(
             children: <Widget>[
