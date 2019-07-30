@@ -21,6 +21,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+      
       body: Center(
         child: Container(
           color: Colors.white,
