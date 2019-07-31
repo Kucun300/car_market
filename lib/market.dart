@@ -30,6 +30,7 @@ class _MarketState extends State<Market> {
                 margin: EdgeInsets.all(20),
                 color: Colors.white,
                 child: ListTile(
+          
                   leading: Icon(
                     Icons.account_box,
                     size: 70,

@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
               accountName: new Text('Car Mrket'),
               accountEmail: new Text('for contact admin@admin.com'),
               currentAccountPicture: new CircleAvatar(
-                backgroundImage: new NetworkImage('https://www.staticwhich.co.uk/media/images/adhoc/cars---do-not-delete-473727.jpg'),
+                backgroundImage: new NetworkImage('https://picsum.photos/200'),
               ),
             ),
             new ListTile(
