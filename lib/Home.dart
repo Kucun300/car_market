@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'Add.dart';
 import 'market.dart';
 import 'models/Model.dart';
+import 'Login.dart';
+import 'Register.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -33,7 +35,7 @@ class Home extends StatelessWidget {
               title: new Text('Login'),
               onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return login();
+                    return Login();
                   }));
                 },
             ),
@@ -41,7 +43,7 @@ class Home extends StatelessWidget {
               title: new Text('Register'),
               onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return register();
+                    return Register();
                   }));
                 },
             ),
