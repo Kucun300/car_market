@@ -29,6 +29,22 @@ class Home extends StatelessWidget {
                   }));
                 },
             ),
+            new ListTile(
+              title: new Text('Login'),
+              onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return login();
+                  }));
+                },
+            ),
+            new ListTile(
+              title: new Text('Register'),
+              onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return register();
+                  }));
+                },
+            ),
           ],
         ),
       ),
