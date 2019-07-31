@@ -37,6 +37,9 @@ class _detailesState extends State<detailes> {
                     Text('Model: ${widget.car.car_model}', style: TextStyle(color: Colors.indigo[900]),),
                     Text('Gear: ${widget.car.car_gear}', style: TextStyle(color: Colors.indigo[900]),),
                     Text('Price: ${widget.car.car_price}', style: TextStyle(color: Colors.indigo[900]),),
+                    new Image(
+                      image: NetworkImage('${widget.car.picture}'),
+                    )
                   ],
                 ),
               ),

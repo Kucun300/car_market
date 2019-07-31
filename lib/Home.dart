@@ -25,6 +25,14 @@ class Home extends StatelessWidget {
               ),
             ),
             new ListTile(
+              title: new Text('Market'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Market();
+                }));
+              },
+            ),
+            new ListTile(
               title: new Text('Add Car'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {

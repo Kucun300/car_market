@@ -14,6 +14,8 @@ class _AddState extends State<Add> {
   TextEditingController aboutController = TextEditingController();
   TextEditingController car_modelController = TextEditingController();
   TextEditingController car_gearController = TextEditingController();
+  TextEditingController pictureController = TextEditingController();
+  TextEditingController idController = TextEditingController();
   TextEditingController car_priceController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,26 @@ class _AddState extends State<Add> {
         color: Colors.red[900],
         child: ListView(
           children: <Widget>[
+            ListTile(
+              title: TextField(
+                controller: idController,
+                decoration: InputDecoration(
+                  labelText: 'Enter Id',
+                  fillColor: Colors.white,
+                  filled: true,
+                ),
+              ),
+            ),
+            ListTile(
+              title: TextField(
+                controller: pictureController,
+                decoration: InputDecoration(
+                  labelText: 'Enter picture URL',
+                  fillColor: Colors.white,
+                  filled: true,
+                ),
+              ),
+            ),
             ListTile(
               title: TextField(
                 controller: descriptionController,
@@ -95,16 +117,18 @@ class _AddState extends State<Add> {
               color: Colors.indigo[900],
               child: Text('Add Car', style: TextStyle(color: Colors.white),),
               onPressed: () {
-                var description = descriptionController.text;
-                var mileage = mileageController.text;
-                var about = aboutController.text;
-                var car_model = car_modelController.text;
-                var car_gear = car_gearController.text;
-                var car_price = car_priceController.text;
-                Car car = Car(description, mileage, DateTime.now().toString(),
-                    about, car_model, car_gear, car_price);
+                // var id = idController.text;
+                // var description = descriptionController.text;
+                // var mileage = mileageController.text;
+                // var publish_on = DateTime.now().toString();
+                // var picture = pictureController.text;
+                // var about = aboutController.text;
+                // var car_model = car_modelController.text;
+                // var car_gear = car_gearController.text;
+                // var car_price = car_priceController.text;
+                // Car car = Car(id , description , mileage , publish_on , picture , about, car_model, car_gear, car_price);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Market(car);
+                  return Home();
                 }));
               },
             ),
