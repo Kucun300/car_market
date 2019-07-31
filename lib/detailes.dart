@@ -1,3 +1,4 @@
+import 'package:car_market/Home.dart';
 import 'package:flutter/material.dart';
 import 'models/Model.dart';
 
@@ -14,7 +15,7 @@ class _detailesState extends State<detailes> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('details'),
+        title: Text('Car Details'),
         backgroundColor: Colors.indigo[900],
       ),
       body: Container(
@@ -42,6 +43,16 @@ class _detailesState extends State<detailes> {
               SizedBox(
                 height: 20,
               ),
+              RaisedButton(
+              color: Colors.indigo[900],
+              child: Text('Home', style: TextStyle(color: Colors.white),),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Home();
+                })
+                );
+              }
+              )
             ],
           ),
         ),
