@@ -19,13 +19,13 @@ class _detailesState extends State<detailes> {
         backgroundColor: Colors.indigo[900],
       ),
       body: Container(
+        width: double.infinity,
         padding: EdgeInsets.all(20),
         color: Colors.red[900],
-        child: Center(
-          child: Column(
+        child: Column(
             children: <Widget>[
               Container(
-                width: double.infinity,
+                width: 400,
                 padding: EdgeInsets.all(10),
                 color: Colors.white,
                 child: Column(
@@ -55,7 +55,6 @@ class _detailesState extends State<detailes> {
               )
             ],
           ),
-        ),
       ),
     );
   }
