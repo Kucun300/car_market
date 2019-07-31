@@ -22,43 +22,58 @@ class _MarketState extends State<Market> {
           backgroundColor: Colors.indigo[900],
         ),
         body: Container(
-          color: Colors.red[900],
-          child: ListView(
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(bottom: 10),
-                margin: EdgeInsets.all(20),
-                color: Colors.white,
-                child: ListTile(
-          
-                  leading: Icon(
-                    Icons.account_box,
-                    size: 70,
-                  ),
-                  title: Text(
-                    '${widget.car.description}',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.indigo[900],
+            color: Colors.red[900],
+            child: Center(
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(bottom: 10),
+                    margin: EdgeInsets.all(20),
+                    color: Colors.white,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.account_box,
+                        size: 70,
+                      ),
+                      title: Text(
+                        '${widget.car.description}',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.indigo[900],
+                        ),
+                      ),
+                      subtitle: Text(
+                        '${widget.car.about}',
+                        style: TextStyle(
+                          color: Colors.indigo[900],
+                          fontSize: 16,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return detailes(widget.car);
+                        }));
+                      },
                     ),
                   ),
-                  subtitle: Text(
-                    '${widget.car.about}',
-                    style: TextStyle(
-                      color: Colors.indigo[900],
-                      fontSize: 16,
-                    ),
+                  SizedBox(
+                    height: 20,
                   ),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return detailes(widget.car);
-                    }));
-                  },
-                ),
+                  RaisedButton(
+                      color: Colors.indigo[900],
+                      child: Text(
+                        'Home',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Home();
+                        }));
+                      })
+                ],
               ),
-            ],
-          ),
-        ));
+            )));
   }
 }
