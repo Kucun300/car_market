@@ -20,7 +20,7 @@ class _RegisterState extends State<Register> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text('Logout'),
+            title: Text('Register'),
             backgroundColor: Color.fromRGBO(0, 39, 78, 0.7)
           ),
           body: Container(
@@ -79,7 +79,7 @@ class _RegisterState extends State<Register> {
                 RaisedButton(
                     color: Colors.indigo[900],
                     child: Text(
-                      'Logout',
+                      'Register',
                       style: TextStyle(color: Colors.white),
                     ),
                     onPressed: () {
